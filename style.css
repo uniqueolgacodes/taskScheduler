@@ -15,11 +15,22 @@ body {
     margin: 0 auto;
   }
   
-  #tasks,
-  #completed-tasks {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    color: #333;
   }
   
   #add-task {
@@ -41,5 +52,51 @@ body {
     padding: 10px;
     border: none;
     cursor: pointer;
+  }
+  
+  /* Animation for table rows */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s;
+  }
+  
+  .fade-out {
+    animation: fadeOut 0.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  /* Interactivity for table rows */
+  tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover button {
+    opacity: 1;
+  }
+  
+  button {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  button:hover {
+    background-color: #666;
   }
   
