@@ -45,7 +45,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Task Manager</title>
+  <title>Task Scheduler</title>
   <style>
    body {
     font-family: sans-serif;
@@ -60,7 +60,7 @@
   }
   
   main {
-    width: 500px;
+    width: 50%;
     margin: 0 auto;
   }
   
@@ -84,12 +84,26 @@
   
   #add-task {
     margin-top: 10px;
+    margin-bottom: 20px;
   }
   
+  #newtask{
+    border-top: 4px solid black;
+    border-left:4px solid black;
+    border-radius: 15px;
+    text-align: center;
+    width: auto;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    padding-top: 15px;
+    margin-top: 40px;
+    margin-bottom:70px;
+  }
+
   input[type="text"],
   input[type="date"],
   select {
-    width: 100%;
+    width: 70%;
     padding: 10px;
     border: 1px solid black;
     margin-bottom: 10px;
@@ -102,6 +116,8 @@
     border: none;
     cursor: pointer;
   }
+
+  
 
   #add-task {
     background-color: #333;
@@ -163,7 +179,7 @@
 </head>
 <body>
   <header>
-    <h1>Task Manager</h1>
+    <h1>Task Scheduler</h1>
   </header>
   <main>
     <table id="tasks-table">
@@ -194,14 +210,26 @@
       <tbody id="completed-tasks">
       </tbody>
     </table>
-    TASK NAME<input type="text" id="task-name" placeholder="What's the task?">
-    DUE DATE<input type="date" id="task-due-date" placeholder="Task Due Date">
-    PRIORITY LEVEL<select id="priority">
-      <option value="1">Low</option>
-      <option value="2">Medium</option>
-      <option value="3">High</option>
-    </select>
+    <div id="newtask">
+        <h2>ADD A NEW TASK</h2>
+        <div id="newtask_name">
+            <h3>TASK NAME</h3>
+            <input type="text" id="task-name" placeholder="What's the task?">
+        </div>
+        <div id="newtask_date">
+            <h3>TASK DATE</h3>
+            <input type="date" id="task-due-date" placeholder="Task Due Date">
+        </div>
+        <div id="newtask_priority">
+            <h3>PRIORITY LEVEL</h3>
+            <select id="priority">
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+            </select>
+        </div>
     <button id="add-task">Add Task</button>
+    </div>
   </main>
   <script src="script.js"></script>
 </body>
