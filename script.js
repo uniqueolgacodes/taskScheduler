@@ -296,6 +296,6 @@ function updateTaskIds() {
   }
 }
 
-// This function is called when the add task button is clicked.
+// This function is called when the add task button is clicked
 var addTaskButton = document.getElementById("add-task");
 addTaskButton.addEventListener("click", addTask);
